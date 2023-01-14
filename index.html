@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>主主页</title>
+		<link rel="stylesheet" href="./index.css">
+		<link rel="icon" href="./images/icon.ico">
+		<script type="text/javascript">
+			var love_frequency = 0;
+			
+			 function front() {
+				 document.getElementById("win1").style.zIndex = -1;
+				 document.getElementById("win").style.zIndex = 99;
+			 }
+			 function front1() {
+			 	document.getElementById("win").style.zIndex = -1;
+			 	document.getElementById("win1").style.zIndex = 99;
+			 }
+			 
+			 function love() {
+				 document.getElementById("what's_up").innerHTML = "LXB";
+			 }
+			 function love2() {
+				love_frequency = love_frequency + 1;
+				if(love_frequency == 1) {
+					document.getElementById("what's_up1").innerHTML = "别点了";
+				}else if(love_frequency == 2) {
+					document.getElementById("what's_up1").innerHTML = "我没有喜欢的人";
+				}else if(love_frequency == 3) {
+					document.getElementById("what's_up1").innerHTML = "真的没有";
+				}else if(love_frequency == 4) {
+					document.getElementById("what's_up1").innerHTML = "你相信我";
+				}else if(love_frequency == 5) {
+					document.getElementById("what's_up1").innerHTML = "真的没有";
+				}else if(love_frequency == 6) {
+					document.getElementById("what's_up1").innerHTML = "?";
+					love_frequency = 0;
+				}
+				// }else if(love_frequency == 8) {
+				// 	document.getElementById("what's_up1").innerHTML = "其实吧...";
+				// 	love_frequency = 0;
+				// }
+			}
+		</script>
+	</head>
+	<body style="background-color: #fae9bd;">
+		<div class="gradient_color">
+			<div id="zhuye_center"><div id="zhuye"></div></div>
+			<p class="summary">
+				本网站是我的博客和我的世界钻石启动器(自制)共同创建<br /><br />
+			</p>
+		</div>
+		<p class="site-time">本站已在鸡烈的网络世界中度过:<br /> <span id="sitetime">?年?天?小时?分钟?秒（正在加载...）</span></p>
+		<a href="./about.html" target="_self">
+			<img src="./images/Cheems.png" alt="作者" id="writer" title="作者信息">
+		</a>
+		<div class="window" onmouseover="front()" id="win">
+			<p class="window_title">LZD的个人博客</p>
+			<p>
+				<pre class="lzd-starter">
+ 1丨<font style="color: #8280ab;"># ! /usr/bin/env python3</font>
+ 2丨<font style="color: #8280ab;"># -*- coding: utf-8 -*-</font>
+ 3丨
+ 4丨
+ 5丨<font style="color: #b778b7;">def</font> <font style="color: #3e8fee;">main</font>():
+ 6丨	love = <font style="color: #54990d;">"I love <a href="javascript: love2();" style="color: #54990d; text-decoration: none;" id="what's_up1">?</a>"</font>
+ 7丨	<font style="color: #b778b7;">print</font>(<font style="color: #54990d;">f"{love}</font>")  <font style="color: #8280ab;"># 多此一举</font>
+ 8丨	<font style="color: #b778b7;">print</font>(</font> <font style="color: #54990d;">"<a href="https://blog.114514-muli.com" style="color: #54990d;">点我进入</a>"</font>)
+ 9丨
+10丨
+11丨<font style="color: #b778b7;">if</font> __name__ <font style="color: #54990d;">== "__main__"</font>:
+12丨	main()  <font style="color: #8280ab;"># 梅开二度(指的是上面的多此一举)</font>
+13丨
+14丨
+15丨
+				</pre>
+			</p>
+		</div>
+		<div class="window1" onmouseover="front1()" id="win1">
+			<p class="window_title1">钻石启动器官网</p>
+			<p>
+				<pre class="lzd-starter">
+ 1丨<font color="#98c379">#</font><font color="#b778b7">include</font>&nbsp;<font color="#54990d">&lt;stdio.h&gt;</font>
+ 2丨
+ 3丨
+ 4丨<font style="color: #b778b7;">int</font> <font color="#3e8fee">main</font>()
+ 5丨{
+ 6丨	<font style="color: #b778b7;">char</font> IOVE[] <font style="color: #54990d;: white; text-decoration: none;">= "I love <a href="javascript: love();" style="color: #54990d; text-decoration: none;" id="what's_up">?</a>"</font>
+ 7丨	<font style="color: #3e8fee;">printf</font>(<font style="color: #54990d;">"%c"</font>, IOVE);
+ 8丨	<font style="color: #3e8fee;">printf</font>(<font style="color: #54990d">"<a href="#" style="color: #54990d;">点我进入</a>"</font>)
+ 9丨	<font style="color: #b778b7;">return</font> <font style="color: #54990d;">0;</font>
+10丨}
+11丨
+12丨
+13丨
+14丨
+15丨
+				</pre>
+			</p>
+		</div>
+		
+		<script language=javascript>
+			function typing(txt, ID) {
+			    var text = document.getElementById(ID);
+			    var classname = text.className;
+			    text.className += " cursor"
+			    var index = 0; // 当前光标位置
+			    function add_text() {
+			        text.innerText = txt.slice(0, index++);
+			        if (index <= txt.length) {
+			            setTimeout(add_text, 200);
+			        } else {
+			            text.className = classname;
+			        }
+			    }
+			    add_text();
+			}
+			typing("主 页", "zhuye");
+			
+			function siteTime(){
+			    window.setTimeout("siteTime()", 1000);
+			    var seconds = 1000;
+			    var minutes = seconds * 60;
+			    var hours = minutes * 60;
+			    var days = hours * 24;
+			    var years = days * 365;
+			    var today = new Date();
+			    var todayYear = today.getFullYear();
+			    var todayMonth = today.getMonth()+1;
+			    var todayDate = today.getDate();
+			    var todayHour = today.getHours();
+			    var todayMinute = today.getMinutes();
+			    var todaySecond = today.getSeconds();
+			    /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+			    year - 作为date对象的年份，为4位年份值
+			    month - 0-11之间的整数，做为date对象的月份
+			    day - 1-31之间的整数，做为date对象的天数
+			    hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+			    minutes - 0-59之间的整数，做为date对象的分钟数
+			    seconds - 0-59之间的整数，做为date对象的秒数
+			    microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+			    var t1 = Date.UTC(2023,0,14,16,4,0); //北京时间2022-00-00 00:00:00创建网站的时间
+			    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+			    var diff = t2-t1;
+			    var diffYears = Math.floor(diff/years);
+			    var diffDays = Math.floor((diff/days)-diffYears*365);
+			    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+			    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+			    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+			    document.getElementById("sitetime").innerHTML=+diffYears+"年"+diffDays+"天"+diffHours+"时"+diffMinutes+"分钟"+diffSeconds+"秒";
+			}
+			siteTime();
+		</script>
+	</body>
+</html>

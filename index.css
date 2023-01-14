@@ -1,0 +1,119 @@
+html body {
+	margin: 0px;
+	padding: 0px;
+}
+div.gradient_color {
+	position: fixed;
+	padding: 20px;
+	left: 0px;
+	width: calc(30% - 40px);
+	height: 100%;
+	background: repeating-linear-gradient(to right, #155799, #159957);
+}
+#zhuye_center {
+	text-align: center;
+	padding-top: 40px;
+}
+#zhuye {
+	color: white;
+	font-size: 40px;
+	display: inline-block;
+	position: relative;
+}
+.summary {
+	color: white;
+	font-size: 25px;
+	text-indent: 2em;
+	line-height: 50px;
+	padding-top: 30px;
+}
+			
+/* 模拟光标闪烁 */
+.cursor::after {
+	height: 50px;
+	content: '';
+	position: absolute;
+	right: -10px;
+	top: 5px;
+	width: 3px;
+	animation: san 0.5s steps(1) infinite;
+}
+@keyframes san {
+	0%,
+	100% {
+		background-color: rgb(0, 0, 0);
+	}
+	50% {
+	 background-color: transparent;
+	}
+}
+
+#writer {
+	width: 50px;
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+}
+
+.blog {
+	width: 50px;
+	position: fixed;
+	right: 0rem;
+	top: 0px;
+}
+
+.window {
+	width: 500px;
+	height: 400px;
+	/* border: 2px solid #434343; */
+	border-radius: 10px;
+	background-color: #282c34;
+	position: fixed;
+	right: 60px;
+	top: 15px;
+	z-index: 1;
+}
+.window_title {
+	background-color: #636363;
+	color: #ffffff;
+	padding-top: 5px;
+	margin-top: 0;
+	border-radius: 10px 10px 0 0;
+	text-align: center;
+}
+
+.window1 {
+	width: 500px;
+	height: 400px;
+	/* border: 2px solid #434343; */
+	border-radius: 10px;
+	background-color: #282c34;
+	position: fixed;
+	right: 300px;
+	bottom: 15px;
+	z-index: 0;
+}
+.window_title1 {
+	background-color: #636363;
+	color: #ffffff;
+	padding-top: 5px;
+	margin-top: 0;
+	border-radius: 10px 10px 0 0;
+	text-align: center;
+}
+
+.lzd-starter {
+	color: white;
+	font-size: 20px;
+}
+.starter {
+	color: white;
+	text-decoration: none;
+}
+
+.site-time {
+	font-size: 20px;
+	position: fixed;
+	top: 50px;
+	left: 35%;
+}
